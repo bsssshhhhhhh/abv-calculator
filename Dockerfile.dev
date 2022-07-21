@@ -1,0 +1,5 @@
+FROM node:lts-alpine
+WORKDIR /app
+
+EXPOSE 5173
+CMD ["/bin/sh", "./dev.sh"]

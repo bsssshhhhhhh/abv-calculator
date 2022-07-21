@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  abv-dev-server:
+    container_name: abv-dev-server
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 5173:5173
+    volumes:
+      - .:/app
