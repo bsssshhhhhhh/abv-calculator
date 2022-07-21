@@ -10,7 +10,8 @@ Because I make a lot of alcohol and I'm tired of having to do these calculations
 
 ## Running the dev container
 
-`docker-compose up -d`
+1. `docker-compose up -d`
+2. go to localhost:5173
 
 ## Isn't it overkill to use vue for this?
 
