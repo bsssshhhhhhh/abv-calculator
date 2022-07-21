@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build .
+      run: docker build . -t ghcr.io/bsssshhhhhhh/abv-calculator
     - name: Docker Login
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u bsssshhhhhhh --password-stdin
     - name: Push the Docker image
-      run: docker push ghcr.io/bsssshhhhhhh/abv-calculator:latest
+      run: docker push ghcr.io/bsssshhhhhhh/abv-calculator
