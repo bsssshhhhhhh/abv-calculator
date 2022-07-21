@@ -8,7 +8,7 @@
         <td>
           <input
             type="number"
-            step="0.01"
+            step="0.001"
             v-model="originalGravity" />
         </td>
       </tr>
@@ -19,7 +19,7 @@
         <td>
           <input
             type="number"
-            step="0.01"
+            step="0.001"
             v-model="finalGravity" />
         </td>
       </tr>
