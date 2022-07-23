@@ -4,7 +4,7 @@ Because I make a lot of alcohol and I'm tired of having to do these calculations
 
 ## Running the prod container
 
-1. `docker run ghcr.io/bsssshhhhhhh/abv-calculator:latest -p 8080:80`
+1. `docker run -p 8080:80 ghcr.io/bsssshhhhhhh/abv-calculator:latest`
 2. go to localhost:8080
 
 
