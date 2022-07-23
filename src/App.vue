@@ -1,26 +1,20 @@
 <template>
   <div>
     <table>
-      <tr>
+      <tr class="inputs">
         <th class="right">
           Original Gravity (OG)
         </th>
         <td>
-          <input
-            type="number"
-            step="0.001"
-            v-model="originalGravity" />
+          <abv-input v-model="originalGravity" />
         </td>
       </tr>
-      <tr>
+      <tr class="inputs">
         <th class="right">
           Final Gravity (FG)
         </th>
         <td>
-          <input
-            type="number"
-            step="0.001"
-            v-model="finalGravity" />
+          <abv-input v-model="finalGravity" />
         </td>
       </tr>
       <tr >
@@ -52,23 +46,29 @@
 <script lang="ts">
 import { useAbvCalculator } from './abv';
 import { defineComponent, ref } from 'vue';
+import AbvInput from './AbvInput.vue';
 
-export default defineComponent(() => {
-  const originalGravity = ref(1);
-  const finalGravity = ref(1);
+export default defineComponent({
+  components: {
+    AbvInput
+  },
+  setup() {
+    const originalGravity = ref(1);
+    const finalGravity = ref(1);
 
-  const { abvCalculations } = useAbvCalculator({ originalGravity, finalGravity });
+    const { abvCalculations } = useAbvCalculator({ originalGravity, finalGravity });
 
-  return {
-    originalGravity,
-    finalGravity,
-    abvCalculations
-  };
+    return {
+      originalGravity,
+      finalGravity,
+      abvCalculations
+    };
+  }
 });
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .right {
   text-align: right;
@@ -80,6 +80,25 @@ td, th {
 
 input {
   padding: 0.35rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.inputs {
+  td, th {
+    padding: 1rem;
+    border: 1px solid #333;
+
+    &:first-child {
+      border-right: none;
+    }
+
+    &:not(:first-child) {
+      border-left: none;
+    }
+  }
 }
 
 </style>
