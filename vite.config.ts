@@ -13,7 +13,7 @@ export default defineConfig({
         background_color: '#FAE96F',
         short_name: 'ABV',
       },
-      injectRegister: 'auto',
+      injectRegister: 'inline',
       registerType: 'autoUpdate'
     })
   ]

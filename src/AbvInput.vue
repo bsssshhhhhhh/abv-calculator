@@ -32,7 +32,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .abv-input {
   display: flex;
   gap: 1rem;
@@ -49,5 +49,12 @@ button {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 
   flex-grow: 1;
+
+  &:hover {
+    background: #eee;
+    cursor: pointer;
+  }
 }
+
+
 </style>
